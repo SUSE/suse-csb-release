@@ -1,0 +1,7 @@
+[isv_SUSE_suse-it-infra]
+name=isv:SUSE:suse-it-infra ($releasever)
+type=rpm-md
+baseurl=https://download.opensuse.org/repositories/isv:/SUSE:/suse-it-infra/$releasever/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/isv:/SUSE:/suse-it-infra/$releasever/repodata/repomd.xml.key
+enabled=1
