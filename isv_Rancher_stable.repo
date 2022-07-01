@@ -1,0 +1,7 @@
+[isv_Rancher_stable]
+name=Rancher stable packages (rpm)
+type=rpm-md
+baseurl=https://download.opensuse.org/repositories/isv:/Rancher:/stable/rpm/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/isv:/Rancher:/stable/rpm/repodata/repomd.xml.key
+enabled=1
