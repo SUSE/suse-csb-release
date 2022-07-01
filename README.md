@@ -19,4 +19,34 @@ SUSE IT needs help from fellow geekos with release engineering skills to define 
 * productivity tools are installed
 * Details are tracked here: https://en.opensuse.org/Portal:Leap:CSBRequirements
 
-https://teams.microsoft.com/l/meetup-join/19%3ameeting_NGM2OGNjNjQtYjcxMi00MjJiLWI2ZDMtMjAxMzI1MGY5YzBl%40thread.v2/0?context=%7b%22Tid%22%3a%22f7a17af6-1c5c-4a36-aa8b-f5be247aa4ba%22%2c%22Oid%22%3a%2272f6f3b7-35f8-48b2-bfd9-fd379d4e4b51%22%7d
+
+## Combustion example usecase for SUSEIT
+
+About combustion https://en.opensuse.org/Portal:MicroOS/Combustion
+
+### What does our combustion example?
+* set root password (by default unset)
+* enforce that user has to specify root password while using sudo (root access controlled by SUSE IT)
+* change the default btrfs/luks password (set to suse-it by default). This part doesn't work for some reason.
+
+### Firstboot wizzard for user
+**The rest of the configuration will be done by the user as part of the first boot. This is handled by gnome-initial-setup.**
+
+Once the gnome-initial-setup is finished and network connectivity is established, additional SUSE-it pre-selected non-rpm software will be deployed via mod-firstboot. This is handled by gnome-branding-Leap.
+
+### Instructions for SUSE IT###
+Copy combustion directory from this git repo on a root of flash drive formatted as ext4 disk has to be labeled as "ignition".
+
+Tweak password for luks and root in the config script on the USB drive.
+
+**Ensure that the USB drive is plugged on the first boot to the employee machine.**
+
+The machine will be rebooted afterward due to a one-shot reboot service (livecd/openSUSE/config.sh).
+
+Perhaps you could do what Vadim did with fido?
+
+TODO: do not print debug output into /etc/issue.d/combustion
+
+### Credit
+
+Big thanks to Richard Brown and his work on MicroOS, as this is heavily based on his setup.
