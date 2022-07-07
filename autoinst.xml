@@ -797,6 +797,8 @@
       <package>aaa_base</package>
       <package>yast2-country</package>
       <package>NetworkManager-applet</package>
+      <package>NetworkManager-openconnect-profile-SUSE-VPN</package>
+      <package>NetworkManager-openvpn-profile-SUSE-VPN</package>
       <package>mdadm</package>
     </packages>
     <patterns t="list">
